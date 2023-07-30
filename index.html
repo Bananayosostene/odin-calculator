@@ -1,47 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./calc.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./calc.css" />
     <title>My Calculator | project</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="calculator">
-
-  <input type="text" class="calculator-screen" value="" disabled />
-  
-  <div class="calculator-keys">
-    
-    <button type="button" class="operator" value="+">+</button>
-    <button type="button" class="operator" value="-">-</button>
-    <button type="button" class="operator" value="*">&times;</button>
-    <button type="button" class="operator" value="/">&divide;</button>
-
-    <button type="button" value="7">7</button>
-    <button type="button" value="8">8</button>
-    <button type="button" value="9">9</button>
-
-
-    <button type="button" value="4">4</button>
-    <button type="button" value="5">5</button>
-    <button type="button" value="6">6</button>
-
-
-    <button type="button" value="1">1</button>
-    <button type="button" value="2">2</button>
-    <button type="button" value="3">3</button>
-
-
-    <button type="button" value="0">0</button>
-    <button type="button" class="decimal" value=".">.</button>
-    <button type="button" class="all-clear" value="all-clear">Clear</button>
-
-    <button type="button" class="equal-sign operator" value="=">=</button>
-
-  </div>
-</div>
-</body>
-<script src="./calc.js"></script>
+      <input type="text" id="result" disabled />
+      <div class="buttons">
+        <button class="ac" onclick="clearResult()">AC</button>
+        <button class="del" onclick="deleteStep()">DEL</button>
+        <button class="operator" onclick="appendValue('(')">(</button>
+        <button class="operator" onclick="appendValue(')')">)</button>
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button class="operator" onclick="appendValue('/')">/</button>
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button class="operator" onclick="appendValue('*')">×</button>
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button class="operator" onclick="appendValue('-')">-</button>
+        <button onclick="appendValue('0')">0</button>
+        <button onclick="appendValue('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button class="operator" onclick="appendValue('+')">+</button>
+      </div>
+    </div>
+  </body>
+  <script src="./calc.js"></script>
 </html>
